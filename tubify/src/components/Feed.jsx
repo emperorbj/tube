@@ -2,7 +2,7 @@
 
 const Feed = () => {
     return (
-        <div>
+        <div className="text-3xl bg-purple-600">
             feed
         </div>
     )
