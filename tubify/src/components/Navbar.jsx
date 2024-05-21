@@ -1,10 +1,11 @@
 
 
+
 const Navbar = () => {
     return (
-        <div>
-            navbar
-        </div>
+        <>
+        <h1></h1>
+        </>
     )
 }
 
