@@ -4,7 +4,7 @@ import VideoDetails from './VideoDetails';
 const Feed = () => {
     return (
         <div className=" w-full h-screen bg-blue-600">
-            <div className='flex gap-4 mt-3'>
+            <div className='flex gap-4 mt-1'>
                     <SideBar/>
                     <VideoDetails/>
             </div>
