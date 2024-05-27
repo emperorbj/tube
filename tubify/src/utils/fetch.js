@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 
-const BASE_URL = 'https://youtube-data8.p.rapidapi.com/search/'
 
+const BASE_URL = 'https://youtube-data8.p.rapidapi.com/search/'
+const apiKey = import.meta.env.REACT_APP_RAPID_API_KEY
 const options = {
         method: 'GET',
         url: BASE_URL,
@@ -12,7 +13,13 @@ const options = {
         gl: 'US'
         },
         headers: {
-        'x-rapidapi-key': '02ac68da04msh8553818dfdb7979p1b3047jsn11b3a62643a2',
+        'x-rapidapi-key': apiKey,
         'x-rapidapi-host': 'youtube-data8.p.rapidapi.com'
         }
+};
+
+export const fetchFromAPI = async (url) => {
+        const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+        
+        return data;
 };
