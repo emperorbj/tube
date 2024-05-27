@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import {Feed, Navbar, SearchFeed, VideoDetails, ChannelDetails } from './components';
+import {Feed, Navbar, SearchFeed, Video, ChannelDetails } from './components';
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/"  element={<Feed/>} />
-          <Route path="/video/:id" element={<VideoDetails/>} />
+          <Route path="/video/:id" element={<Video/>} />
           <Route path="/channel/:id" element={<ChannelDetails />} />
           <Route path="/search/:searchTerm" element={<SearchFeed />} />
         </Routes>

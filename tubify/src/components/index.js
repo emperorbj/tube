@@ -1,7 +1,7 @@
 export { default as Navbar } from './Navbar';
 export { default as Feed } from './Feed';
 export { default as ChannelDetails } from './ChannelDetails';
-export { default as VideoDetails } from './VideoDetails';
+export { default as Video } from './Video';
 export { default as SearchFeed } from './SearchFeed';
 
 // import { PiVideoLight } from "react-icons/pi";

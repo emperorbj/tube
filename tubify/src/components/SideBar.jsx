@@ -4,14 +4,17 @@ import { LuMusic4 } from "react-icons/lu";
 import { PiGooglePodcastsLogoBold } from "react-icons/pi";
 import { IoSchoolOutline, IoGameControllerOutline } from "react-icons/io5";
 import { MdLiveTv,MdOutlineSportsVolleyball } from "react-icons/md";
-const SideBar = () => {
+import PropTypes from 'prop-types';
+
+
+const SideBar = ({ selectedCategory, setSelectedCategory }) => {
     return (
         <div className="bg-green-500 w-[220px] h-screen flex flex-col gap-6 items-center pt-[30px]">
-            <div className="flex pl-[30px] gap-2 bg-orange-300 py-[10px] w-[180px] rounded-md ">
+            <div className="flex pl-[30px] gap-2 bg-orange-300 py-[10px] w-[180px] rounded-md "  onClick={() => setSelectedCategory('New')}>
                 <SlHome size={26} />
                 <h2 className="text-xl mr-2 mt-1">New</h2>
             </div> 
-            <div className="flex pl-[30px] gap-2 bg-orange-300 py-[10px] w-[180px] rounded-md ">
+            <div className="flex pl-[30px] gap-2 bg-orange-300 py-[10px] w-[180px] rounded-md "   onClick={() => setSelectedCategory('channel-1')}>
                 <FaLaptopCode size={28} />
                 <h2 className="text-xl mr-2">channel-1</h2>
             </div>
@@ -47,4 +50,8 @@ const SideBar = () => {
     )
 }
 
+SideBar.propTypes = {
+    selectedCategory: PropTypes.string.isRequired,
+    setSelectedCategory: PropTypes.func.isRequired
+};
 export default SideBar
