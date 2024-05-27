@@ -9,7 +9,7 @@ const SideBar = () => {
         <div className="bg-green-500 w-[220px] h-screen flex flex-col gap-6 items-center pt-[30px]">
             <div className="flex pl-[30px] gap-2 bg-orange-300 py-[10px] w-[180px] rounded-md ">
                 <SlHome size={26} />
-                <h2 className="text-xl mr-2 mt-1">Home</h2>
+                <h2 className="text-xl mr-2 mt-1">New</h2>
             </div> 
             <div className="flex pl-[30px] gap-2 bg-orange-300 py-[10px] w-[180px] rounded-md ">
                 <FaLaptopCode size={28} />
