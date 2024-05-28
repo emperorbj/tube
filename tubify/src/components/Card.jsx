@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Card = ({videos}) => {
     console.log(videos)
@@ -13,5 +13,7 @@ const Card = ({videos}) => {
 
     )
 }
-
+Card.propTypes = {
+    videos: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 export default Card

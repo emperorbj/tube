@@ -60,7 +60,7 @@ import Card from "./Card"
 // ]
 const Feed = () => {
 
-    const [selectedCategory, setSelectedCategory] = useState("New");
+    const [selectedCategory, setSelectedCategory] = useState("movie");
     const [videos, setVideos] = useState(null);
     useEffect(() => {
         setVideos(null);
