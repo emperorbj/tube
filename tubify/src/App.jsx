@@ -1,20 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import {Feed, Navbar, SearchFeed, Video, ChannelDetails } from './components';
 import './App.css';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
 
   return (
-    <BrowserRouter>
-        <Navbar/>
-        <Routes>
-          <Route path="/"  element={<Feed/>} />
-          <Route path="/video/:id" element={<Video/>} />
-          <Route path="/channel/:id" element={<ChannelDetails />} />
-          <Route path="/search/:searchTerm" element={<SearchFeed />} />
-        </Routes>
-    </BrowserRouter>
+    <>
+      <Sidebar/>
+    </>
   )
 }
 
