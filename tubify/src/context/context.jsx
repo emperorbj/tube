@@ -1,12 +1,42 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import PropTypes from 'prop-types';
+import run from "../config/gemini";
 
 export const    Context = createContext();
 
 const ContextProvider = (props) => {
 
-    const contextValue = {
+    const[input, setInput] = useState('');
+    const[recentPrompt, setRecentPrompt] = useState('');
+    const[prevPrompt, setPrevPrompt] = useState([]);
+    const[showResult, setShowResult] = useState(false);
+    const[loading, setLoading] = useState(false);
+    const[resultData, setResultData] = useState('')
 
+    const onSend = async (prompt) => {
+        
+        setResultData("") 
+        setLoading(true)
+        setShowResult(true)
+        const response = await run(input)
+        setResultData(response)
+        setLoading(false)
+        setInput('')
+    }
+
+    // onSend('what is angular js')
+
+    const contextValue = {
+        prevPrompt,
+        setPrevPrompt,
+        onSend,
+        setRecentPrompt,
+        recentPrompt,
+        showResult,
+        loading,
+        resultData,
+        input,
+        setInput
     }
 
     return (
