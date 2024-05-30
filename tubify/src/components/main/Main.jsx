@@ -11,7 +11,7 @@ const Main = () => {
             <div className=' max-w-[900px] m-auto'>
                 {/* greet */}
                 <div className='my-[50px] mx-[0px] text-slate-400 font-bold p-[20px] '>
-                    <p><span className=' bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent text-[60px]'>Hello Dev</span></p>
+                    <p><span className=' bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent text-[60px]'>Hello Senior Dev,</span></p>
                     <p className='text-[40px]'>How can I help you today?</p>
                 </div>
                 {/* cards */}
