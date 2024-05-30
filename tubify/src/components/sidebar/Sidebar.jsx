@@ -1,41 +1,56 @@
-import { assets } from '../../assets/assets'
+import { useState } from 'react';
+import { assets } from '../../assets/assets';
+
+
 const Sidebar = () => {
+
+    const [extend, setExtend] = useState(false)
     return (
         <div className='min-h-[100vh] px-[15px] py-[25px] inline-flex flex-col justify-between bg-slate-50'>
             {/* top */}
             <div>
                 {/* menu icon */}
-                <img className='w-[20px] block ml-[10px] cursor-pointer' src={assets.menu_icon} alt="" />
+                <img className='w-[20px] block ml-[10px] cursor-pointer' src={assets.menu_icon} onClick={()=> setExtend(prev => !prev)} alt="" />
                 {/* new chat */}
                 <div className='mt-[10px] inline-flex items-center gap-[10px] py-[10px] px-[25px] 
                 bg-white rounded-lg text-lg text-slate-800 cursor-pointer'>
                     <img className='w-[20px]' src={assets.plus_icon} alt="" />
-                    <p>New Chat</p>
+                    {extend?<p>New Chat</p>:null}
                 </div>
                 {/* recent */}
+                {extend?
                 <div className='flex flex-col'>
                     <p className='mt-[30px] mb-[20px]'>Recent</p>
                     {/* recent entry */}
-                    <div className=''>
+                    <div className='flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
+                    text-slate-700 cursor-pointer hover:bg-white'>
                         <img className='w-[20px]' src={assets.message_icon} alt="" />
                         <p>What is Angular...</p>
                     </div>
                 </div>
+                :null}
             </div>
             {/* bottom */}
-            <div>
-                <div>
+            <div className='flex flex-col'>
+
+                <div className=' flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
+                    text-slate-700 cursor-pointer hover:bg-white' > 
                     <img className='w-[20px]' src={assets.question_icon} alt="" />
-                    <p>Help</p>
+                    {extend?<p>Help</p>:null}
                 </div>
-                <div>
+
+                <div className='flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
+                    text-slate-700 cursor-pointer hover:bg-white'>
                     <img className='w-[20px]' src={assets.history_icon} alt="" />
-                    <p>Activities</p>
+                    {extend?<p>Activities</p>:null}
                 </div>
-                <div>
+
+                <div className='flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
+                    text-slate-700 cursor-pointer hover:bg-white'>
                     <img className='w-[20px]' src={assets.setting_icon} alt="" />
-                    <p>Settings</p>
+                    {extend?<p>Settings</p>:null}
                 </div>
+
             </div>
         </div>
     )
