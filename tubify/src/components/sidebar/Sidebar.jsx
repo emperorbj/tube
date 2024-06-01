@@ -26,7 +26,7 @@ const Sidebar = () => {
                 <div className='flex flex-col'>
                     <p className='mt-[30px] mb-[20px]'>Recent</p>
                     {
-                        prevPrompt.map((item,index) => {
+                        prevPrompt.map((item) => {
                             return(
                                 <div key={item} className='flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
                                 text-slate-700 cursor-pointer hover:bg-white'>
