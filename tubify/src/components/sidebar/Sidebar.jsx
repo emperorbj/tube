@@ -16,7 +16,7 @@ const Sidebar = () => {
                 {/* menu icon */}
                 <img className='w-[30px] block ml-[10px]  cursor-pointer' src={assets.menu_icon} onClick={()=> setExtend(prev => !prev)} alt="" />
                 {/* new chat */}
-                <div onClick={() => newChat()} className='mt-[10px] inline-flex items-center gap-[10px] py-[10px] px-[25px] 
+                <div onClick={() => newChat()} className='mt-[10px] ml-[-10px] inline-flex items-center gap-[10px] py-[10px] px-[25px] 
                 bg-blue-300 shadow-blue-300 shadow-lg rounded-xl text-lg text-slate-800 cursor-pointer'>
                     <img className='w-[20px]' src={assets.plus_icon} alt="" />
                     {extend?<p>New Chat</p>:null}
