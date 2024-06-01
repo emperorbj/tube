@@ -1,5 +1,17 @@
+
+.sidebar{
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(248, 250, 252);
+}
+
 @media (max-width:600px) {
-    .mobile{
+    .sidebar{
         display: none;
     }
 }
+
+
