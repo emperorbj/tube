@@ -29,7 +29,7 @@ const Main = () => {
                 <>
                 {/* greet */}
                 <div className='my-[50px] mx-[0px] text-slate-400 font-bold p-[20px] '>
-                    <p><span className=' bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent text-[60px]'>Hello Senior Dev,</span></p>
+                    <p><span className=' bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent text-[60px]'>Hello Senior Dev,</span></p>
                     <p className='text-[40px]'>How can I help you today ?</p>
                 </div>
                 {/* cards */}
@@ -63,27 +63,21 @@ const Main = () => {
                     </div>
                     {/* result data */}
                     <div className='flex items-start gap-[20px] mb-[40px] pb-[40px]'>
-                        <img src={assets.gemini_icon} alt="" />
+                        <img src={assets.brain_icon} alt="" />
                         {
                             loading?
-                            <div className='loader w-[100%] flex flex-col gap-[10px]'>
-                                <hr className=' rounded-[4px] border-none 
-                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                            <div className='loader w-[100%] flex flex-col gap-[20px]'>
+                                <hr className=' rounded-[50px] border-none 
+                                bg-white bg-gradient-to-r from-blue-300 to-pink-400
                                 loading' />
-                                <hr className=' rounded-[4px] border-none 
-                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                <hr className=' rounded-[50px] border-none 
+                                bg-white bg-gradient-to-r from-blue-300 to-pink-400
                                 loading' />
-                                <hr className=' rounded-[4px] border-none 
-                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                <hr className=' rounded-[50px] border-none 
+                                bg-white bg-gradient-to-r from-blue-300 to-pink-400
                                 loading' />
-                                <hr className=' rounded-[4px] border-none 
-                                bg-white bg-gradient-to-r from-blue-600 to-green-600
-                                loading'/>
-                                <hr className=' rounded-[4px] border-none 
-                                bg-white bg-gradient-to-r from-blue-600 to-green-600
-                                loading'/>
-                                <hr className=' rounded-[4px] border-none 
-                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                <hr className=' rounded-[50px] border-none 
+                                bg-white bg-gradient-to-r from-blue-300 to-pink-400
                                 loading'/>
                             </div>
                             :

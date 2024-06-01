@@ -3,8 +3,8 @@
 }
 
 .loading{
-    background-size: 800px 50px;
-    height: 20px;
+    background-size: 800px 80px;
+    height: 30px;
     animation: loader 3s infinite linear;
 }
 
