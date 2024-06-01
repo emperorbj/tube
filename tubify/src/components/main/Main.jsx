@@ -88,10 +88,10 @@ const Main = () => {
                 </div>
                 }
 
-                <div className='absolute  mt-[80px] bottom-0 w-[100%] max-w-[900px] py-0 px-[20px] m-auto'>
+                <div className='absolute  mt-[80px] bottom-0 w-full py-0 px-[20px] m-auto'>
                     {/* search bar */}
                     <div className=' flex items-center justify-between gap-[20px] bg-slate-100 py-[40px] px-[30px] rounded-[20px]'>
-                        <input onChange={(e) => setInput(e.target.value)} value={input} className=' outline-none border-none bg-slate-100 w-[600px] text-[20px]' type="text" placeholder='Enter a prompt here' />
+                        <input onChange={(e) => setInput(e.target.value)} value={input} className=' outline-none border-none bg-slate-100  sm:w-[300px]  md:w-[600px] lg:w-[600px] text-[20px]' type="text" placeholder='Enter a prompt here' />
                         <div className='flex md:gap-4 lg:gap-4 bg-green-600 gap-[4px] lg:bg-slate-500 md:bg-yellow-500 sm:gap-[10px] sm:bg-purple-600'>
                             <img className=' cursor-pointer' width={30}  src={assets.gallery_icon} alt="" />
                             <img className=' cursor-pointe ' width={30} src={assets.mic_icon} alt="" />

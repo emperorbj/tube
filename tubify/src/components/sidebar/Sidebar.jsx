@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { assets } from '../../assets/assets';
 import { useContext } from 'react';
 import { Context } from '../../context/context';
-
+import './side.css'
 
 
 const Sidebar = () => {
@@ -10,7 +10,7 @@ const Sidebar = () => {
     const [extend, setExtend] = useState(false)
     const {onSend,prevPrompt,newChat } = useContext(Context)
     return (
-        <div className='min-h-[100vh] px-[15px] py-[25px] inline-flex flex-col justify-between bg-slate-50'>
+        <div className='mobile  min-h-[100vh] px-[15px] py-[25px] inline-flex flex-col justify-between bg-slate-50'>
             {/* top */}
             <div>
                 {/* menu icon */}
