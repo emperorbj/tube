@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { assets } from '../../assets/assets';
 import { Context } from '../../context/context';
+import './main.css'
 
 const Main = () => {
 
@@ -61,7 +62,7 @@ const Main = () => {
                         {recentPrompt}
                     </div>
                     {/* result data */}
-                    <div className='flex items-start gap-[20px]'>
+                    <div className='flex items-start gap-[20px] mb-[40px] pb-[40px]'>
                         <img src={assets.gemini_icon} alt="" />
                         {
                             loading?
@@ -69,11 +70,24 @@ const Main = () => {
                                 <hr className=' rounded-[4px] border-none 
                                 bg-white bg-gradient-to-r from-blue-600 to-green-600
                                 loading' />
-                                <hr />
-                                <hr />
+                                <hr className=' rounded-[4px] border-none 
+                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                loading' />
+                                <hr className=' rounded-[4px] border-none 
+                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                loading' />
+                                <hr className=' rounded-[4px] border-none 
+                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                loading'/>
+                                <hr className=' rounded-[4px] border-none 
+                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                loading'/>
+                                <hr className=' rounded-[4px] border-none 
+                                bg-white bg-gradient-to-r from-blue-600 to-green-600
+                                loading'/>
                             </div>
                             :
-                            <p className='text-[20px] font-medium leading-relaxed ' dangerouslySetInnerHTML={{__html:resultData}}></p>
+                            <p className='text-[20px] font-medium leading-relaxed pb-[50px]' dangerouslySetInnerHTML={{__html:resultData}}></p>
                         }
                         
                     </div>

@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { assets } from '../../assets/assets';
+import { useContext } from 'react';
+import { Context } from '../../context/context';
+
 
 
 const Sidebar = () => {
 
     const [extend, setExtend] = useState(false)
+    const {onSend,prevPrompt,setRecentPrompt } = useContext(Context)
     return (
         <div className='min-h-[100vh] px-[15px] py-[25px] inline-flex flex-col justify-between bg-slate-50'>
             {/* top */}
@@ -21,12 +25,17 @@ const Sidebar = () => {
                 {extend?
                 <div className='flex flex-col'>
                     <p className='mt-[30px] mb-[20px]'>Recent</p>
-                    {/* recent entry */}
-                    <div className='flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
-                    text-slate-700 cursor-pointer hover:bg-white'>
-                        <img className='w-[20px]' src={assets.message_icon} alt="" />
-                        <p>What is Angular...</p>
-                    </div>
+                    {
+                        prevPrompt.map((item,index) => {
+                            return(
+                                <div key={item} className='flex items-start gap-[10px] p-[10px] pr-[40px] rounded-lg 
+                                text-slate-700 cursor-pointer hover:bg-white'>
+                                    <img className='w-[20px]' src={assets.message_icon} alt="" />
+                                    <p>{item}</p>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
                 :null}
             </div>
