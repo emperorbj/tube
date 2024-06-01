@@ -33,7 +33,7 @@ const Main = () => {
                     <p className='text-[40px]'>How can I help you today ?</p>
                 </div>
                 {/* cards */}
-                <div className=' grid grid-cols-4 gap-[15px] p-[20px] mt-[-50px] mb-[50px]'>
+                <div className=' grid grid-cols-1 gap-[10px] mb-[120px] p-[15px] sm:mb-[120px] sm:gap-[10px] sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-[15px] md:gap-[15px] lg:p-[20px] md:p-[20px] lg:mt-[-50px] lg:mb-[50px]'>
                     {/* card */}
                     <div className='h-[200px] hover:bg-slate-100 shadow-md p-[15px] bg-slate-50 rounded-[20px] relative cursor-pointer'>
                         <p className='text-[20px] text-slate-600'>Suggest the best place to go for a holiday</p>
@@ -92,10 +92,10 @@ const Main = () => {
                     {/* search bar */}
                     <div className=' flex items-center justify-between gap-[20px] bg-slate-100 py-[40px] px-[30px] rounded-[20px]'>
                         <input onChange={(e) => setInput(e.target.value)} value={input} className=' outline-none border-none bg-slate-100 w-[600px] text-[20px]' type="text" placeholder='Enter a prompt here' />
-                        <div className='flex gap-4'>
+                        <div className='flex md:gap-4 lg:gap-4 bg-green-600 gap-[4px] lg:bg-slate-500 md:bg-yellow-500 sm:gap-[10px] sm:bg-purple-600'>
                             <img className=' cursor-pointer' width={30}  src={assets.gallery_icon} alt="" />
                             <img className=' cursor-pointe ' width={30} src={assets.mic_icon} alt="" />
-                            <img className=' cursor-pointer' onClick={() => onSend()} width={30} src={assets.send_icon} alt="" />
+                            <img className=' cursor-pointer mr-[35px]' onClick={() => onSend()} width={30} src={assets.send_icon} alt="" />
                         </div>
                     </div>
                     <p className=' my-5 mt-[15px]'>

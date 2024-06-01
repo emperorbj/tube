@@ -8,7 +8,7 @@ import { Context } from '../../context/context';
 const Sidebar = () => {
 
     const [extend, setExtend] = useState(false)
-    const {onSend,prevPrompt,setRecentPrompt } = useContext(Context)
+    const {onSend,prevPrompt,newChat } = useContext(Context)
     return (
         <div className='min-h-[100vh] px-[15px] py-[25px] inline-flex flex-col justify-between bg-slate-50'>
             {/* top */}
@@ -16,7 +16,7 @@ const Sidebar = () => {
                 {/* menu icon */}
                 <img className='w-[20px] block ml-[10px] cursor-pointer' src={assets.menu_icon} onClick={()=> setExtend(prev => !prev)} alt="" />
                 {/* new chat */}
-                <div className='mt-[10px] inline-flex items-center gap-[10px] py-[10px] px-[25px] 
+                <div onClick={() => newChat()} className='mt-[10px] inline-flex items-center gap-[10px] py-[10px] px-[25px] 
                 bg-white rounded-lg text-lg text-slate-800 cursor-pointer'>
                     <img className='w-[20px]' src={assets.plus_icon} alt="" />
                     {extend?<p>New Chat</p>:null}
