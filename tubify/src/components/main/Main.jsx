@@ -50,7 +50,7 @@ const Main = () => {
                     <p className='text-[40px]'>How can I help you today ?</p>
                 </div>
                 {/* cards */}
-                <div className=' grid grid-cols-1 gap-[10px] mb-[120px] p-[40px] sm:mb-[120px] sm:gap-[10px] sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-[15px] md:gap-[15px] lg:p-[20px] md:p-[20px] lg:mt-[-50px] lg:mb-[50px]'>
+                <div className=' grid grid-cols-1 gap-[10px] mb-[220px] p-[40px] sm:mb-[120px] sm:gap-[10px] sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-[15px] md:gap-[15px] lg:p-[20px] md:p-[20px] lg:mt-[-50px] lg:mb-[50px]'>
                     {/* card */}
                     <div className='h-[200px] hover:bg-slate-100 shadow-md p-[15px] bg-slate-50 dark:bg-slate-700 rounded-[20px] relative cursor-pointer'>
                         <p className='text-[20px] text-slate-600 dark:text-slate-200 '>Suggest the best place to go for a holiday</p>
