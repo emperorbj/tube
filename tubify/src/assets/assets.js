@@ -14,8 +14,13 @@ import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
 import gemini_icon from './gemini_icon.png'
 import brain_icon from './brain.png'
+import sun from './sun.png'
+import moon from './moon.png'
+
 
 export const assets = {
+    sun,
+    moon,
     history_icon,
     menu_icon,
     plus_icon,

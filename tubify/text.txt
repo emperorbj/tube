@@ -1,1 +1,4 @@
 min-h-[100vh] px-[15px] py-[25px] inline-flex flex-col justify-between bg-slate-50 '
+prevPrompt,
+setPrevPrompt,
+setRecentPrompt,
